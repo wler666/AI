@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>智能体助手</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../Downloads/style.css" />
+</head>
+<body>
+<div class="app">
+
+    <!-- 顶部栏 -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">
+          <span class="brand-mark-dot"></span>
+        </div>
+        <div class="brand-text">
+          <h1>耀辰智能体</h1>
+          <p class="status"><span class="status-dot"></span>在线 · 随时为你解答</p>
+        </div>
+      </div>
+      <button class="reset-btn" id="resetBtn" title="清空对话">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+        <span>清空对话</span>
+      </button>
+    </header>
+
+    <!-- 消息区域 -->
+    <main class="chat" id="chat">
+
+      <div class="day-divider"><span>今天</span></div>
+
+      <div class="msg-row ai">
+        <div class="avatar ai-avatar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="bubble-col">
+          <div class="bubble ai-bubble">
+            你好，我是耀辰智能体，可以帮你查询公司资料、解答产品与营销问题。有什么可以帮你的吗？
+          </div>
+          <span class="time">09:12</span>
+        </div>
+      </div>
+
+      <div class="msg-row user">
+        <div class="bubble-col">
+          <div class="bubble user-bubble">
+            帮我看看9月的营销投入和产出情况
+          </div>
+          <span class="time">09:13</span>
+        </div>
+        <div class="avatar user-avatar">我</div>
+      </div>
+
+      <div class="msg-row ai">
+        <div class="avatar ai-avatar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="currentColor"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="bubble-col">
+          <div class="bubble ai-bubble">
+            9月营销总投入为286万元，环比增长12.4%；带动全渠道销售额约2,150万元，整体ROI为7.5。需要我拆解到具体渠道数据吗？
+          </div>
+          <span class="time">09:13</span>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- 输入区域 -->
+    <footer class="composer">
+      <div class="composer-inner">
+        <textarea
+          id="msgInput"
+          class="composer-input"
+          placeholder="输入消息，Enter 发送，Shift+Enter 换行"
+          rows="1"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" title="发送">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+      <p class="composer-hint">智能体的回答可能不完全准确，重要信息请以实际数据为准。</p>
+    </footer>
+
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
